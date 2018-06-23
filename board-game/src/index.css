@@ -3,3 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.Board {
+  display: flex;
+  flex-direction: column;
+  background-color: darkolivegreen;
+  justify-content: space-evenly
+}
+.BoardRow {
+  display: flex;  
+  background-color: greenyellow;
+  justify-content: space-evenly
+}
+
+.Tile {
+  text-align:center;
+  background-color: dodgerblue;
+  width: 50px;
+  border-radius: 10px;
+  margin:5px
+}
