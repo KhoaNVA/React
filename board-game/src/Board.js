@@ -6,28 +6,31 @@ class Board extends Component {
         super(props);
 
         this.state = {
-            tiles: [],
-            revealed: []
+            tiles: []
         };
+
+        this.revealed = [];
+
         for (let index = 0; index < 6; index++) {
             this.state.tiles.push({ id: index, value: index });
         }
+
         this.renderTile = this.renderTile.bind(this);
         this.update = this.update.bind(this);
         this.updateRevealed = this.updateRevealed.bind(this);
     }
     update(inc, i) {
-        // console.log('incrementing', i, inc);
         this.setState(currentState => ({
             tiles: currentState.tiles.map(
                 tile => tile.id !== i ? tile : { ...tile, value: tile.value + inc }
             )
         }));
-        // console.log(this.state.tiles);
     }
-    updateRevealed(index){        
-        this.state.revealed.push(index);
-        console.log(this.state.revealed);
+    updateRevealed(index) {
+        if (this.revealed.length === 2) {
+            this.revealed= [];
+        }
+        this.revealed.push(index);
     }
     renderTile(tile, i) {
         return (
