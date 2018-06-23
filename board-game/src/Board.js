@@ -11,7 +11,7 @@ class Board extends Component {
 
         this.revealed = [];
 
-        for (let index = 0; index < 6; index++) {
+        for (let index = 0; index < 40; index++) {
             this.state.tiles.push({ id: index, value: index });
         }
 
@@ -28,7 +28,7 @@ class Board extends Component {
     }
     updateRevealed(index) {
         if (this.revealed.length === 2) {
-            this.revealed= [];
+            this.revealed = [];
         }
         this.revealed.push(index);
     }
@@ -44,9 +44,7 @@ class Board extends Component {
     render() {
         return (
             <div className="Board">
-                <div className="BoardRow">
-                    {this.state.tiles.map(this.renderTile)}
-                </div>
+                {this.state.tiles.map(this.renderTile)}
             </div>
         )
     }
