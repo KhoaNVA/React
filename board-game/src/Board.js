@@ -10,9 +10,12 @@ class Board extends Component {
         };
 
         this.revealed = [];
-
-        for (let index = 0; index < 40; index++) {
-            this.state.tiles.push({ id: index, value: index });
+        let intSeed = 40;
+        for (let index = 0; index < intSeed; index++) {
+            this.state.tiles.push({
+                id: index,
+                value: Math.floor(Math.random() * intSeed)
+            });
         }
 
         this.renderTile = this.renderTile.bind(this);
