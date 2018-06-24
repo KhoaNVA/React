@@ -22,33 +22,27 @@ class Tile extends Component {
         this.props.onChange(1, this.props.index);
     }
     renderValue() {
-        return (
-            <div onClick={this.increment}>
-                <p>{this.props.children}</p>
-            </div>
-        )
+        // console.log(this.props);
+        // console.log(this.props.children);
+        return (<p onClick={this.increment}>{this.props.children[0]}</p>)
     }
     renderTile() {
-        return (
-            <div onClick={this.reveal}>
-                <p>hidden</p>
-            </div>
-        )
+        return (<p onClick={this.reveal}>hidden</p>)
     }
     render() {
-        if (this.state.hidden) {
+        let className = this.props.children[1];
+        if (className === 'hidden') {
             return (
-                <div className="Tile">
+                <div className={"Tile " + className}>
                     {this.renderTile()}
                 </div>
             )
-        } else {
-            return (
-                <div className="Tile">
-                    {this.renderValue()}
-                </div>
-            )
         }
+        return (
+            <div className={"Tile " + className}>
+                {this.renderValue()}
+            </div>
+        )
     }
 }
 

@@ -1,23 +1,27 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 .Board {
-  display: flex;
-  background-color: seagreen;
-  justify-content: center;
-  width: 600px;
-  flex-wrap: wrap;
-  border-radius: 10px
+    display: flex;
+    background-color: seagreen;
+    justify-content: center;
+    width: 600px;
+    flex-wrap: wrap;
+    border-radius: 10px
 }
 
 .Tile {
-  text-align: center;
-  background-color: dodgerblue;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  margin: 5px
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: dodgerblue;
+}
+
+.Tile.inactive {
+    background-color: red;
 }
