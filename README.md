@@ -18,7 +18,7 @@ Checklist of features:
 	
   
 
-[] Implement some user interfaces
+[ ] Implement some user interfaces
 
 	Header: some general info, some option to set starting game parameters?
 	
@@ -26,16 +26,16 @@ Checklist of features:
 	
 	Footer: Introductions about me?
 	
-[] Improve graphics
+[ ] Improve graphics
 
 	Better color palette?
 	
 	SVG sprites?
 	
-[] Host site somewhere
+[ ] Host site somewhere
 
-[] Build Unity 2018 version
+[ ] Build Unity 2018 version
 
-[] Profits???
+[ ] Profits???
 
 
