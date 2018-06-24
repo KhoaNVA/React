@@ -15,15 +15,12 @@ class Tile extends Component {
         this.setState({
             hidden: !this.state.hidden
         });
-        // console.log(this.props);
         this.props.onReveal(this.props.index);
     }
     increment() {
         this.props.onChange(1, this.props.index);
     }
     renderValue() {
-        // console.log(this.props);
-        // console.log(this.props.children);
         return (<p onClick={this.increment}>{this.props.children[0]}</p>)
     }
     renderTile() {

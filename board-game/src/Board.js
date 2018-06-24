@@ -16,11 +16,13 @@ class Board extends Component {
         };
 
         this.revealed = [];
-        let intSeed = 40;
-        for (let i = 0; i < intSeed; i++) {
+        this.intSeed = 4;
+        this.score = 0;
+
+        for (let i = 0; i < this.intSeed; i++) {
             this.state.tiles.push({
                 id: i,
-                value: i,//Math.floor(Math.random() * intSeed),
+                value: Math.floor(Math.random() * this.intSeed),
                 state: this.AllowedStates.HIDDEN
             });
         }
@@ -29,6 +31,7 @@ class Board extends Component {
         this.update = this.update.bind(this);
         this.updateRevealed = this.updateRevealed.bind(this);
         this.isEqual = this.isEqual.bind(this);
+        this.ResetMatchIfWon = this.ResetMatchIfWon.bind(this);
     }
     update(incrementor, i) {
         this.setState(currentState => ({
@@ -39,6 +42,20 @@ class Board extends Component {
     }
     isEqual(a, b) {
         return this.state.tiles[a].value === this.state.tiles[b].value;
+    }
+    ResetMatchIfWon() {
+        if (this.intSeed === this.score) {
+            setTimeout(() => {
+                this.score = 0;
+                this.setState(curState => ({
+                    tiles: curState.tiles.map(tile => tile = {
+                        ...tile,
+                        value: Math.floor(Math.random() * this.intSeed),
+                        state: this.AllowedStates.HIDDEN
+                    })
+                }));
+            },2000);
+        }
     }
     updateRevealed(index) {
         if (this.revealed.indexOf(index) === -1) {
@@ -58,6 +75,8 @@ class Board extends Component {
                         tile => arr.indexOf(tile.id) > -1 ? { ...tile, state: this.AllowedStates.INACTIVE } : tile
                     )
                 }));
+                this.score += 2;
+                this.ResetMatchIfWon();
             }
             else {
                 setTimeout(() => {
