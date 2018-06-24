@@ -26,6 +26,8 @@ Checklist of features:
 	
 	Footer: Introductions about me?
 	
+[ ] Complete feature and refactor code
+	
 [ ] Improve graphics
 
 	Better color palette?
@@ -35,7 +37,5 @@ Checklist of features:
 [ ] Host site somewhere
 
 [ ] Build Unity 2018 version
-
-[ ] Profits???
 
 
