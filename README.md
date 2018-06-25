@@ -34,7 +34,9 @@ Checklist of features:
 	
 	SVG sprites?
 	
-[ ] Host site somewhere
+[x] Host site somewhere
+
+	https://khoanva.github.io/React_Boardgame/
 
 [ ] Build Unity 2018 version
 
