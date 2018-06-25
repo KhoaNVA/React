@@ -16,7 +16,9 @@ Checklist of features:
 	
 	The board reset itself when win condition met.
 	
-  
+[x] Host site somewhere
+
+	https://khoanva.github.io/React_Boardgame/
 
 [ ] Implement some user interfaces
 
@@ -33,10 +35,6 @@ Checklist of features:
 	Better color palette?
 	
 	SVG sprites?
-	
-[x] Host site somewhere
-
-	https://khoanva.github.io/React_Boardgame/
 
 [ ] Build Unity 2018 version
 
